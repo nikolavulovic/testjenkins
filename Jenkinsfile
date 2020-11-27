@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        echo 'Step into test'
+      parallel {
+        stage('Test') {
+          steps {
+            echo 'Step into test'
+          }
+        }
+
+        stage('Coex Tests') {
+          steps {
+            echo 'Step into Coex Tests'
+          }
+        }
+
       }
     }
 
