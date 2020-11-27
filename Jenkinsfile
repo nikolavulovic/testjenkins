@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Initialize') {
+    stage('Build') {
       steps {
-        echo 'This is first step in script'
+        echo 'Step into build'
       }
     }
 
